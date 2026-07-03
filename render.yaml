@@ -5,7 +5,7 @@ databases:
   - name: MedSimulator-core-hms-postgres
     databaseName: MedSimulator_core_hms
     user: MedSimulator_core_hms
-    region: frankfurt
+    region: singapore
     plan: basic-1gb
     postgresMajorVersion: "16"
 

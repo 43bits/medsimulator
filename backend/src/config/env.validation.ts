@@ -37,7 +37,7 @@ export function validateEnvironment(
     'jwt_secret',
     'your_jwt_secret',
     'development_jwt_secret',
-    'invinceible_jwt_secret',
+    'MedSimulator_jwt_secret',
   ]);
 
   if (nodeEnv === production) {

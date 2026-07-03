@@ -13,7 +13,7 @@ export class HealthController {
   live() {
     return {
       status: 'ok',
-      service: 'invinceible-core-hms-backend',
+      service: 'MedSimulator-core-hms-backend',
       timestamp: new Date().toISOString(),
       uptimeSeconds: Math.round(process.uptime()),
     };

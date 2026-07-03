@@ -145,7 +145,7 @@ export class SettingsService {
     const defaults = [
       {
         settingKey: 'SYSTEM_CURRENCY',
-        settingValue: 'KES',
+        settingValue: 'INR',
         valueType: 'string',
         category: 'GENERAL',
         description: 'Default system currency',

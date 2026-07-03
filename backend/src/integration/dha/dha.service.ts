@@ -221,7 +221,7 @@ export class DhaService implements OnModuleInit {
         patient: { reference: `Patient/${claim.patient.patientNumber}` },
         provider: { reference: `Organization/${claim.facility.code}` },
         identifier: [{ system: 'urn:hms:sha-claim', value: claim.claimNumber }],
-        total: { value: claim.claimedAmount, currency: 'KES' },
+        total: { value: claim.claimedAmount, currency: 'INR' },
         ...(claim.diagnosisCode || claim.diagnosisText
           ? {
               diagnosis: [

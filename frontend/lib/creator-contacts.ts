@@ -6,7 +6,7 @@ export const creatorContacts = [
     whatsappNumber: "254711776391",
     focus: "Secure APIs, data flows, integrations, and hospital workflow logic.",
     message:
-      "Hello Eng. Otieno, I need assistance with Invinceible Core HMS. Kindly help me with setup, support, or system guidance.",
+      "Hello Eng. Otieno, I need assistance with Medsimulator HMS. Kindly help me with setup, support, or system guidance.",
   },
   {
     name: "Eng. Moikoyo Paul",
@@ -15,7 +15,7 @@ export const creatorContacts = [
     whatsappNumber: "254715673393",
     focus: "Premium interfaces, user experience, dashboards, and workflow design.",
     message:
-      "Hello Eng. Moikoyo, I need assistance with Invinceible Core HMS. Kindly help me with setup, support, or system guidance.",
+      "Hello Eng. Moikoyo, I need assistance with Medsimulator HMS. Kindly help me with setup, support, or system guidance.",
   },
 ] as const;
 

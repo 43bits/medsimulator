@@ -1,156 +1,221 @@
 import Link from "next/link";
 import {
   ArrowRight,
-  Building2,
+  BedDouble,
+  FlaskConical,
   HeartHandshake,
+  Pill,
+  ReceiptText,
   ShieldCheck,
   Stethoscope,
+  Users,
 } from "lucide-react";
-import { PublicSiteHeader } from "@/components/public/public-site-header";
+import { AppLogo } from "@/components/shared/app-logo";
 import { Button } from "@/components/ui/button";
 
-const imagePanels = [
+const heroPhotos = [
   {
-    label: "Advanced Medical Training",
-    image:
-      "https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&w=1000&q=88",
-  },
-  {
-    label: "Patient Care Excellence",
-    image:
-      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1000&q=88",
-  },
-  {
-    label: "Clinical Teamwork",
+    title: "Clinical desk",
     image:
       "https://images.unsplash.com/photo-1551601651-2a8555f1a136?auto=format&fit=crop&w=1000&q=88",
   },
+  {
+    title: "Ward care",
+    image:
+      "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1000&q=88",
+  },
+  {
+    title: "Pharmacy",
+    image:
+      "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=1000&q=88",
+  },
 ];
 
-export default function InspirationPage() {
+const flow = [
+  { title: "Reception", detail: "Patient visit opens here.", icon: Users },
+  { title: "Doctor", detail: "Notes, diagnosis, tests, medicine.", icon: Stethoscope },
+  { title: "Lab", detail: "Results return to the doctor.", icon: FlaskConical },
+  { title: "Pharmacy", detail: "Stock reduces and billing updates.", icon: Pill },
+  { title: "IPD", detail: "Beds, sheets, summaries.", icon: BedDouble },
+  { title: "Cashier", detail: "Invoice, receipt, reports.", icon: ReceiptText },
+];
+
+const controlLines = [
+  ["Facilities", "Branches, users, roles, locations."],
+  ["Billing", "Invoices, Ayushman Bharat, UPI, receipts."],
+  ["Evidence", "Audit logs, location, reports."],
+  ["AI", "Clinical notes and user assistance."],
+];
+
+export default function HomePage() {
   return (
-    <main className="min-h-screen bg-[#f6fbff] text-foreground">
-      <PublicSiteHeader />
+    <main className="min-h-screen bg-[#eef8ff] text-foreground">
+      <section
+        className="relative min-h-screen overflow-hidden bg-cover bg-center"
+        style={{
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=2400&q=90')",
+        }}
+      >
+        <div className="absolute inset-0 bg-[#061d35]/82" />
 
-      <section className="border-b border-border bg-card">
-        <div className="mx-auto grid max-w-[1500px] gap-8 px-5 py-12 md:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
-          <div className="space-y-6">
-            <div className="inline-flex items-center gap-2 border border-border bg-surface-2 px-3 py-2 text-sm font-semibold text-module">
-              <HeartHandshake className="h-4 w-4" />
-              Inspiration Behind MedSimulator
-            </div>
+        <div className="relative mx-auto flex min-h-screen max-w-[1540px] flex-col px-5 py-5 md:px-8">
+          <header className="flex items-center justify-between gap-4 border border-border-strong/30 bg-[#06365f]/94 px-4 py-4 shadow-2xl">
+            <AppLogo light />
+            <nav className="hidden items-center gap-7 text-sm font-semibold text-sky-50 lg:flex">
+              <Link href="/workflow" className="hover:text-muted-foreground">
+                Workflow
+              </Link>
+              <Link href="/facilities" className="hover:text-muted-foreground">
+                Facilities
+              </Link>
+              <Link href="/inspiration" className="hover:text-muted-foreground">
+                Inspiration
+              </Link>
+            </nav>
+            <Button asChild className="rounded-md bg-sky-400 text-[#06233e] hover:bg-sky-300">
+              <Link href="/login">
+                Enter system
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            </Button>
+          </header>
 
-            <div>
-              <h1 className="max-w-3xl text-5xl font-bold leading-tight tracking-tight text-foreground md:text-7xl">
-                Dr. A. P. J. Abdul Kalam
-              </h1>
-              <p className="mt-5 max-w-2xl text-xl leading-9 text-muted-foreground">
-                Inspired by the vision of Dr. A. P. J. Abdul Kalam, MedSimulator
-                represents innovation, technology, and excellence in medical
-                education and hospital management for the next generation of
-                healthcare professionals.
-              </p>
-            </div>
+          <div className="grid flex-1 gap-8 py-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
+            <section className="space-y-7">
+              <div className="inline-flex items-center gap-2 border border-border-strong/35 bg-[#0a4778]/88 px-3 py-2 text-sm font-semibold text-sky-50">
+                <ShieldCheck className="h-4 w-4" />
+                Hospital operating system
+              </div>
 
-            <div className="grid gap-3 sm:grid-cols-3">
-              {[
-                ["Vision", "Technology-driven Healthcare"],
-                ["Mission", "Medical Learning & Simulation"],
-                ["Values", "Innovation, Service & Excellence"],
-              ].map(([title, detail]) => (
-                <div
-                  key={title}
-                  className="border border-border bg-[#f7fcff] p-4"
+              <div>
+                <h1 className="max-w-4xl text-5xl font-bold leading-[1.03] tracking-tight text-white md:text-7xl">
+                  MedSimulator
+                </h1>
+                <p className="mt-5 max-w-2xl text-lg leading-8 text-sky-50/86">
+                  Patient visits, clinical work, pharmacy, billing, Ayushman Bharat integration, reports,
+                  and administration in one controlled workspace.
+                </p>
+              </div>
+
+              <div className="grid max-w-3xl gap-3 sm:grid-cols-3">
+                {[
+                  ["30+", "modules"],
+                  ["24/7", "audit trail"],
+                  ["15", "day facility grace"],
+                ].map(([value, label]) => (
+                  <div key={label} className="border border-border-strong/30 bg-[#082b4d]/90 p-4">
+                    <p className="text-3xl font-bold text-muted-foreground">{value}</p>
+                    <p className="mt-1 text-xs font-semibold uppercase text-sky-50/70">
+                      {label}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+              <div className="flex flex-col gap-3 sm:flex-row">
+                <Button asChild size="lg" className="rounded-md bg-sky-400 text-[#06233e] hover:bg-sky-300">
+                  <Link href="/login">
+                    Open hospital portal
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </Button>
+                <Button
+                  asChild
+                  size="lg"
+                  variant="outline"
+                  className="rounded-md border-border-strong/45 bg-[#082b4d]/70 text-white hover:bg-sky-400/15"
                 >
-                  <p className="text-sm font-semibold uppercase text-module">
-                    {title}
-                  </p>
-                  <p className="mt-2 text-sm leading-6 text-muted-foreground">
-                    {detail}
-                  </p>
-                </div>
-              ))}
-            </div>
+                  <Link href="/workflow">View workflow</Link>
+                </Button>
+              </div>
+            </section>
 
-            <div className="flex flex-col gap-3 sm:flex-row">
-              <Button
-                asChild
-                className="rounded-md bg-primary text-white hover:bg-brand-strong"
-              >
-                <Link href="/login">
-                  Launch MedSimulator
-                  <ArrowRight className="h-4 w-4" />
-                </Link>
-              </Button>
-            </div>
-          </div>
+            <section className="grid gap-4">
+              <div className="grid gap-4 md:grid-cols-3">
+                {heroPhotos.map((photo) => (
+                  <Link
+                    href="/workflow"
+                    key={photo.title}
+                    className="group border border-border-strong/35 bg-[#082b4d]/92 p-2 shadow-2xl"
+                  >
+                    <div
+                      className="h-[310px] bg-cover bg-center transition duration-300 group-hover:scale-[1.01]"
+                      style={{ backgroundImage: `url('${photo.image}')` }}
+                    />
+                    <p className="mt-3 px-1 pb-1 text-sm font-semibold text-white">
+                      {photo.title}
+                    </p>
+                  </Link>
+                ))}
+              </div>
 
-          <div className="grid gap-4 md:grid-cols-[1fr_0.72fr]">
-            <div
-              className="min-h-[720px] border border-border bg-cover bg-center shadow-2xl"
-              style={{
-                backgroundImage:
-                  "url('/inspiration/dr-apj-abdul-kalam.png')",
-              }}
-            />
-
-            <div className="grid gap-4">
-              {imagePanels.map((panel) => (
-                <div
-                  key={panel.label}
-                  className="border border-border bg-card p-3 shadow-lg"
-                >
-                  <div
-                    className="h-48 bg-cover bg-center"
-                    style={{ backgroundImage: `url('${panel.image}')` }}
-                  />
-                  <p className="mt-3 text-sm font-semibold text-foreground">
-                    {panel.label}
-                  </p>
-                </div>
-              ))}
-            </div>
+              <div className="grid gap-3 border border-border-strong/30 bg-[#082b4d]/92 p-4 md:grid-cols-4">
+                {controlLines.map(([title, detail]) => (
+                  <div key={title} className="border border-border-strong/20 bg-[#06365f] p-4">
+                    <p className="text-sm font-bold text-white">{title}</p>
+                    <p className="mt-2 text-xs leading-5 text-sky-50/72">
+                      {detail}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </section>
           </div>
         </div>
       </section>
 
-      <section className="bg-[#eaf7ff]">
-        <div className="mx-auto grid max-w-[1500px] gap-6 px-5 py-14 md:px-8 lg:grid-cols-3">
-          <article className="border border-border bg-card p-7 shadow-sm">
-            <Building2 className="mb-5 h-8 w-8 text-module" />
-            <h2 className="text-2xl font-bold">
-              Smart Hospital Simulation
-            </h2>
-            <p className="mt-4 text-base leading-8 text-muted-foreground">
-              MedSimulator recreates complete hospital workflows including
-              registration, consultation, laboratory, pharmacy, billing,
-              inpatient management, and administration for realistic training.
-            </p>
-          </article>
+      <section className="border-b border-border bg-card">
+        <div className="mx-auto grid max-w-[1540px] gap-5 px-5 py-10 md:px-8 lg:grid-cols-6">
+          {flow.map((item) => {
+            const Icon = item.icon;
+            return (
+              <Link
+                href="/workflow"
+                key={item.title}
+                className="border border-border bg-[#f7fcff] p-5 shadow-sm hover:border-border-strong"
+              >
+                <Icon className="h-6 w-6 text-module" />
+                <p className="mt-5 text-lg font-bold text-foreground">
+                  {item.title}
+                </p>
+                <p className="mt-2 text-sm leading-6 text-muted-foreground">
+                  {item.detail}
+                </p>
+              </Link>
+            );
+          })}
+        </div>
+      </section>
 
-          <article className="border border-border bg-card p-7 shadow-sm">
-            <Stethoscope className="mb-5 h-8 w-8 text-module" />
-            <h2 className="text-2xl font-bold">
-              Designed for Medical Education
-            </h2>
-            <p className="mt-4 text-base leading-8 text-muted-foreground">
-              MedSimulator enables students, doctors, nurses, and healthcare
-              professionals to practice clinical workflows in a modern,
-              technology-enabled environment.
-            </p>
-          </article>
-
-          <article className="border border-border bg-card p-7 shadow-sm">
-            <ShieldCheck className="mb-5 h-8 w-8 text-module" />
-            <h2 className="text-2xl font-bold">
-              Secure, Scalable & Future Ready
-            </h2>
-            <p className="mt-4 text-base leading-8 text-muted-foreground">
-              Built with secure access control, digital records, audit tracking,
-              and modular architecture, MedSimulator is ready for institutions,
-              hospitals, and medical colleges across India.
-            </p>
-          </article>
+      <section className="bg-[#e7f6ff] pb-12">
+        <div className="mx-auto max-w-[1540px] px-5 py-12 md:px-8">
+          <Link
+            href="/inspiration"
+            className="group grid overflow-hidden border border-border bg-card shadow-xl md:grid-cols-[340px_1fr]"
+          >
+            <div
+              className="min-h-[460px] bg-cover bg-center"
+              style={{ backgroundImage: "url('/inspiration/dr-arvind-sharma.png')" }}
+            />
+            <div className="flex flex-col justify-center p-7">
+              <HeartHandshake className="mb-5 h-9 w-9 text-module" />
+              <p className="text-sm font-semibold uppercase text-module">
+                Inspired by
+              </p>
+              <h2 className="mt-2 text-4xl font-bold leading-tight text-foreground">
+                Dr. Arvind Sharma
+              </h2>
+              <p className="mt-4 max-w-xl text-base leading-8 text-muted-foreground">
+                Director of City Lifeline Medicare Corporation and key visionary supporting the 
+                system build.
+              </p>
+              <span className="mt-7 inline-flex items-center gap-2 font-semibold text-module group-hover:text-foreground">
+                View page
+                <ArrowRight className="h-4 w-4" />
+              </span>
+            </div>
+          </Link>
         </div>
       </section>
     </main>

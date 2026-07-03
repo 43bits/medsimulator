@@ -20,7 +20,7 @@ jobs:
         working-directory: backend
     env:
       NODE_ENV: test
-      DATABASE_URL: mysql://user:password@localhost:3306/invinceible_core_hms_v2
+      DATABASE_URL: mysql://user:password@localhost:3306/MedSimulator_core_hms_v2
       JWT_SECRET: ci-only-secret-with-more-than-48-characters-for-tests
       FRONTEND_URL: http://localhost:3001
     steps:
@@ -49,7 +49,7 @@ jobs:
         working-directory: backend
     env:
       NODE_ENV: test
-      DATABASE_URL: mysql://user:password@localhost:3306/invinceible_core_hms_v2
+      DATABASE_URL: mysql://user:password@localhost:3306/MedSimulator_core_hms_v2
       JWT_SECRET: ci-only-secret-with-more-than-48-characters-for-tests
       FRONTEND_URL: http://localhost:3001
       # Exercise the full mock-adapter paths, as production would with

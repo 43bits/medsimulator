@@ -19,7 +19,7 @@ export function QrCodeImage({
   React.useEffect(() => {
     let cancelled = false;
 
-    QRCode.toDataURL(value || "Invinceible Core HMS", {
+    QRCode.toDataURL(value || "Medsimulator HMS", {
       errorCorrectionLevel: "M",
       margin: 1,
       scale: 5,

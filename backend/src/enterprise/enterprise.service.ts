@@ -7,7 +7,7 @@ export class EnterpriseService {
 
   getStatus() {
     return {
-      product: 'Invinceible Core HMS',
+      product: 'Medsimulator HMS',
       enterpriseReady: true,
       featureFlags: this.featureFlags.all(),
       safeguards: {

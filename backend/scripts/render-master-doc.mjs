@@ -1,5 +1,5 @@
 // Renders docs/master/MASTER_SYSTEM_DOCUMENTATION.md into:
-//   - Invinceible-Core-HMS-System-Documentation.pdf (cover, clickable TOC
+//   - MedSimulator-Core-HMS-System-Documentation.pdf (cover, clickable TOC
 //     with page numbers, headers/footers, page numbers, highlighted code)
 //   - MASTER_SYSTEM_DOCUMENTATION.html (self-contained, live Mermaid)
 // Usage: cd backend && node scripts/render-master-doc.mjs
@@ -13,7 +13,7 @@ const masterDir = join(repoRoot, 'docs', 'master');
 const srcPath = join(masterDir, 'MASTER_SYSTEM_DOCUMENTATION.md');
 const pdfPath = join(
   masterDir,
-  'Invinceible-Core-HMS-System-Documentation.pdf',
+  'MedSimulator-Core-HMS-System-Documentation.pdf',
 );
 const htmlPath = join(masterDir, 'MASTER_SYSTEM_DOCUMENTATION.html');
 
@@ -224,7 +224,7 @@ const doc = new PDFDocument({
   margins: { top: MARGIN, bottom: MARGIN + 24, left: MARGIN, right: MARGIN },
   bufferPages: true,
   info: {
-    Title: 'Invinceible Core HMS — Complete System Documentation',
+    Title: 'Medsimulator HMS — Complete System Documentation',
     Author: 'Owinovative',
     Subject: 'Hospital Management Information System — technical documentation',
   },
@@ -257,7 +257,7 @@ doc
   .fillColor(ACCENT)
   .font('Helvetica-Bold')
   .fontSize(30)
-  .text('Invinceible Core HMS', { align: 'center' });
+  .text('Medsimulator HMS', { align: 'center' });
 doc
   .moveDown(0.3)
   .fillColor('#111827')
@@ -275,7 +275,7 @@ doc
   );
 doc.moveDown(3);
 const coverMeta = [
-  ['Repository', 'Owinovative / invinceible_core_hms_v2'],
+  ['Repository', 'Owinovative / MedSimulator_core_hms_v2'],
   ['Version', '2.x'],
   ['Generated', new Date().toISOString().slice(0, 10)],
   ['Audience', 'Clients, administrators, engineers, auditors, certification bodies'],
@@ -606,7 +606,7 @@ for (let i = 1; i < range.count; i += 1) {
     .font('Helvetica')
     .fontSize(8)
     .fillColor('#6b7280')
-    .text('Invinceible Core HMS - System Documentation', MARGIN, 24, {
+    .text('Medsimulator HMS - System Documentation', MARGIN, 24, {
       lineBreak: false,
     });
   const section = sanitize(pageSections[i] ?? '');
@@ -658,7 +658,7 @@ function inlineHtml(text) {
 }
 let html = `<!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Invinceible Core HMS - Complete System Documentation</title>
+<title>Medsimulator HMS - Complete System Documentation</title>
 <script type="module">
 import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
 mermaid.initialize({ startOnLoad: true, theme: 'neutral' });

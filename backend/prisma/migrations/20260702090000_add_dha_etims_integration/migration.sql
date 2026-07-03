@@ -21,7 +21,7 @@ CREATE TABLE `etims_invoices` (
     `totalTaxableAmount` DOUBLE NOT NULL DEFAULT 0,
     `totalTaxAmount` DOUBLE NOT NULL DEFAULT 0,
     `totalAmount` DOUBLE NOT NULL DEFAULT 0,
-    `currency` VARCHAR(10) NOT NULL DEFAULT 'KES',
+    `currency` VARCHAR(10) NOT NULL DEFAULT 'INR',
     `taxBreakdown` JSON NULL,
     `requestPayload` JSON NULL,
     `responsePayload` JSON NULL,

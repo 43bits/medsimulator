@@ -1131,7 +1131,7 @@ export class OtcSalesService {
 
     this.scopeService.assertBranchAccess(user, sale.facilityId, sale.branchId);
 
-    const currency = sale.facility?.currency || sale.branch?.currency || 'KES';
+    const currency = sale.facility?.currency || sale.branch?.currency || 'INR';
     const customer =
       sale.patient ? patientName(sale.patient) : sale.customerName || 'Walk-in customer';
     const customerReference =

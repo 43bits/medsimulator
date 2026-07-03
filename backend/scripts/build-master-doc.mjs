@@ -163,7 +163,7 @@ for (const [, docs] of SECTIONS) {
 
 const today = new Date().toISOString().slice(0, 10);
 
-let out = `# Invinceible Core HMS
+let out = `# Medsimulator HMS
 ## Complete System Documentation
 
 **Enterprise-grade Hospital Management Information System**
@@ -171,7 +171,7 @@ Multi-tenant · NestJS + Next.js + Prisma · KRA eTIMS & DHA ready
 
 | | |
 | --- | --- |
-| Repository | Owinovative/invinceible_core_hms_v2 |
+| Repository | Owinovative/MedSimulator_core_hms_v2 |
 | Version | 2.x (see Changelog) |
 | Generated | ${today} |
 | Audience | Enterprise clients · Hospital administrators · Developers · DevOps · Architects · Auditors · Certification bodies · Investors |

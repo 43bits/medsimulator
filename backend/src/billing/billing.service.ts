@@ -2671,7 +2671,7 @@ export class BillingService {
   async getInvoicePdf(id: number, user: RequestUser) {
     const invoice = await this.getInvoiceByIdScoped(id, user);
     const currency =
-      invoice.facility?.currency || invoice.branch?.currency || 'KES';
+      invoice.facility?.currency || invoice.branch?.currency || 'INR';
     const printableItems = (invoice.items ?? []).filter(
       (item) => item.isRemoved !== true,
     );
@@ -2728,7 +2728,7 @@ export class BillingService {
   async getVerifiedInvoicePdf(invoiceNumber: string, code: string) {
     const invoice = await this.getVerifiedInvoice(invoiceNumber, code);
     const currency =
-      invoice.facility?.currency || invoice.branch?.currency || 'KES';
+      invoice.facility?.currency || invoice.branch?.currency || 'INR';
     const printableItems = (invoice.items ?? []).filter(
       (item) => item.isRemoved !== true,
     );
@@ -2769,7 +2769,7 @@ export class BillingService {
     );
 
     const currency =
-      payment.facility?.currency || payment.branch?.currency || 'KES';
+      payment.facility?.currency || payment.branch?.currency || 'INR';
     const verificationCode = this.buildInvoiceVerificationCode(payment.invoice);
 
     return createHospitalPdfBuffer(
@@ -3007,7 +3007,7 @@ export class BillingService {
     }).format(value);
   }
 
-  private compactMoney(value?: number | null, _currency = 'KES') {
+  private compactMoney(value?: number | null, _currency = 'INR') {
     return `ksh${Number(value || 0).toFixed(1)}`;
   }
 

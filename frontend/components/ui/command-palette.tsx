@@ -190,7 +190,7 @@ export function CommandPalette({
           <div className="flex items-center gap-3 border-t border-border bg-surface-2/60 px-4 py-2 text-[0.7rem] text-muted-foreground">
             <span><span className="kbd">↑↓</span> navigate</span>
             <span><span className="kbd">↵</span> open</span>
-            <span className="ml-auto">Invinceible Core HMS</span>
+            <span className="ml-auto">Medsimulator HMS</span>
           </div>
         </DialogPrimitive.Content>
       </DialogPrimitive.Portal>

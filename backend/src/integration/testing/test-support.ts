@@ -1,5 +1,5 @@
 /**
- * Shared fakes for integration-layer tests. Excluded from coverage.
+ * Shared faINR for integration-layer tests. Excluded from coverage.
  */
 import { ConfigService } from '@nestjs/config';
 import { SafeLoggerService } from '../../resilience/safe-logger.service';

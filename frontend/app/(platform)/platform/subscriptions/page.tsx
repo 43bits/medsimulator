@@ -15,7 +15,7 @@ import { appSelectClass } from "@/lib/select-class";
 function formatMoney(value?: number | null) {
   return new Intl.NumberFormat("en-KE", {
     style: "currency",
-    currency: "KES",
+    currency: "INR",
     maximumFractionDigits: 0,
   }).format(Number(value || 0));
 }
@@ -73,7 +73,7 @@ export default function PlatformSubscriptionsPage() {
               Monthly facility subscriptions
             </h1>
             <p className="mt-2 max-w-3xl text-sm leading-6 text-muted-foreground">
-              Each facility pays KES 5,000 monthly. Super admins record payments
+              Each facility pays INR 5,000 monthly. Super admins record payments
               here; admin dashboards warn before due date and data entry locks
               when payment expires.
             </p>

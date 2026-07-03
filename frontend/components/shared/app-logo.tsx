@@ -31,7 +31,7 @@ export function AppLogo({
         {!hasError ? (
           <img
             src="/brand/logo-icon.png"
-            alt="Invinceible Core HMS"
+            alt="Medsimulator HMS"
             className="h-full w-full object-contain"
             onError={() => setHasError(true)}
           />
@@ -45,10 +45,10 @@ export function AppLogo({
       {!iconOnly && (
         <div className="min-w-0">
           <p className={cn("truncate text-lg font-bold tracking-tight", textMainClass)}>
-            Invinceible Core
+            Medsimulator
           </p>
           <p className={cn("truncate text-xs uppercase tracking-[0.2em]", textSubClass)}>
-            HMS
+            PHC 
           </p>
         </div>
       )}

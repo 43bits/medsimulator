@@ -20,11 +20,11 @@ const jetBrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Invinceible Core HMS",
-    template: "%s · Invinceible Core HMS",
+    default: "MedSimulator",
+    template: "%s · MedSimulator",
   },
   description:
-    "Enterprise hospital management platform — clinical, billing, pharmacy, laboratory, and inpatient workflows.",
+    "Smart hospital management and training platform — clinical, billing, pharmacy, laboratory, and inpatient simulation workflows.",
 };
 
 export default function RootLayout({

@@ -235,7 +235,7 @@ export class ShaClaimsService {
           facilitySignatureUrl: dto.facilitySignatureUrl,
           rubberStampUrl: dto.rubberStampUrl,
           metadata: {
-            source: 'INVINCEIBLE_CORE_HMS',
+            source: 'MedSimulator_CORE_HMS',
             invoiceNumber: invoice?.invoiceNumber ?? null,
           },
         },
@@ -350,7 +350,7 @@ export class ShaClaimsService {
     const serviceStart = claim.servicePeriodStart || claim.createdAt;
     const serviceEnd = claim.servicePeriodEnd || claim.updatedAt;
     const visitType = claim.invoice?.admissionId ? 'Inpatient' : 'Outpatient';
-    const currency = claim.facility?.currency || claim.branch?.currency || 'KES';
+    const currency = claim.facility?.currency || claim.branch?.currency || 'INR';
     const providerLine =
       [claim.facility?.address, claim.facility?.town, claim.facility?.county]
         .filter(Boolean)

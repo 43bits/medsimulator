@@ -1856,7 +1856,7 @@ export default function IpdDetailPage() {
                           <strong>{selectedTreatmentStockItem.reorderLevel}</strong>
                         </p>
                         <p className="mt-1">
-                          Unit price: KES{" "}
+                          Unit price: INR{" "}
                           {Number(selectedTreatmentStockItem.unitPrice || 0).toLocaleString()}
                         </p>
                       </div>

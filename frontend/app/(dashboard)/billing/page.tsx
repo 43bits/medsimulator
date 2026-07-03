@@ -47,7 +47,7 @@ import { downloadPaymentReceiptPdf, type InvoiceItemRecord } from "@/services/bi
 function formatMoney(value?: number | null) {
   return new Intl.NumberFormat(undefined, {
     style: "currency",
-    currency: "KES",
+    currency: "INR",
     maximumFractionDigits: 0,
   }).format(Number(value || 0));
 }

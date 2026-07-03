@@ -69,7 +69,7 @@ function boolLabel(value?: boolean | null) {
 function formatMoney(value?: number | null) {
   return new Intl.NumberFormat(undefined, {
     style: "currency",
-    currency: "KES",
+    currency: "INR",
     maximumFractionDigits: 2,
   }).format(Number(value || 0));
 }

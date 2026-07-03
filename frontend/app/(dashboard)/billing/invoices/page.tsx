@@ -119,7 +119,7 @@ export default function CreateInvoicePage() {
                   />
                 </div>
                 <div className="md:col-span-3">
-                  <label className="text-xs text-muted-foreground mb-1 block">Price (KES)</label>
+                  <label className="text-xs text-muted-foreground mb-1 block">Price (INR)</label>
                   <Input 
                     type="number"
                     value={item.unitPrice}
@@ -147,7 +147,7 @@ export default function CreateInvoicePage() {
               <div className="text-right p-4 rounded-2xl bg-success/5 border border-emerald-500/10">
                 <p className="text-xs text-muted-foreground uppercase tracking-widest mb-1">Total Balance</p>
                 <p className="text-3xl font-bold text-emerald-400">
-                  KES {calculateTotal().toLocaleString()}
+                  INR {calculateTotal().toLocaleString()}
                 </p>
               </div>
             </div>

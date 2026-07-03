@@ -91,7 +91,7 @@ export function CreateFacilityForm() {
       mapLocationLabel: "",
       googleMapsUrl: "",
       timezone: "Africa/Nairobi",
-      currency: "KES",
+      currency: "INR",
       mpesaShortcode: "",
       mpesaPaybill: "",
       mpesaAccountNumber: "",
@@ -190,7 +190,7 @@ export function CreateFacilityForm() {
         mapLocationLabel: "",
         googleMapsUrl: "",
         timezone: "Africa/Nairobi",
-        currency: "KES",
+        currency: "INR",
         mpesaShortcode: "",
         mpesaPaybill: "",
         mpesaAccountNumber: "",
@@ -275,7 +275,7 @@ export function CreateFacilityForm() {
                 <FormItem>
                   <FormLabel>Facility Name</FormLabel>
                   <FormControl>
-                    <Input className="h-11 rounded-xl" placeholder="Invinceible Core Hospital" {...field} />
+                    <Input className="h-11 rounded-xl" placeholder="Medsimulator Hospital" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -518,7 +518,7 @@ export function CreateFacilityForm() {
                 <FormItem>
                   <FormLabel>Currency</FormLabel>
                   <FormControl>
-                    <Input className="h-11 rounded-xl" placeholder="KES" {...field} />
+                    <Input className="h-11 rounded-xl" placeholder="INR" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>

@@ -78,7 +78,7 @@ export function formatPdfDate(value?: string | Date | null) {
   }).format(date);
 }
 
-export function formatPdfMoney(value?: number | null, currency = 'KES') {
+export function formatPdfMoney(value?: number | null, currency = 'INR') {
   return new Intl.NumberFormat('en-KE', {
     style: 'currency',
     currency,
@@ -129,7 +129,7 @@ export async function createHospitalPdfBuffer(
       bufferPages: true,
       info: {
         Title: options.title,
-        Producer: 'Invinceible Core HMS',
+        Producer: 'Medsimulator HMS',
       },
     });
 
@@ -966,7 +966,7 @@ function drawFooter(doc: PDFKit.PDFDocument) {
       .font('Helvetica')
       .fontSize(7.5)
       .text(
-        `Generated ${generatedAt} by Invinceible Core HMS`,
+        `Generated ${generatedAt} by Medsimulator HMS`,
         left + 9,
         footerY - 4,
         {

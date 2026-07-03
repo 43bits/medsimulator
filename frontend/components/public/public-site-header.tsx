@@ -7,7 +7,7 @@ export function PublicSiteHeader() {
   return (
     <header className="border-b border-border bg-card">
       <div className="mx-auto flex max-w-[1500px] items-center justify-between gap-4 px-5 py-5 md:px-8">
-        <Link href="/" aria-label="Invinceible Core HMS home">
+        <Link href="/" aria-label="Medsimulator HMS home">
           <AppLogo />
         </Link>
         <nav className="hidden items-center gap-6 text-sm font-semibold text-muted-foreground md:flex">

@@ -8,7 +8,7 @@ const COMMON_PASSWORDS = new Set([
   'qwerty123',
   '12345678',
   '123456789',
-  'invinceible',
+  'MedSimulator',
   'hospital123',
 ]);
 

@@ -14,7 +14,7 @@ const large = largeFields(models);
 const moneyFloats = moneyFloatFields(models);
 const indexSummary = summarizeIndexes(models);
 
-console.log('Invinceible Core HMS database storage audit');
+console.log('Medsimulator HMS database storage audit');
 console.log(`Models: ${models.length}`);
 console.log(`Fields: ${fields}`);
 console.log(`Large JSON/Text/Bytes fields: ${large.length}`);

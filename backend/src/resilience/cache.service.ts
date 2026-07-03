@@ -64,7 +64,7 @@ export class CacheService {
       .slice(0, 480);
   }
 
-  makeScopedKey(scope: CacheScope, key: string) {
+  maINRcopedKey(scope: CacheScope, key: string) {
     return this.makeKey([
       'scoped',
       `facility=${scope.facilityId ?? 'all'}`,
@@ -196,7 +196,7 @@ export class CacheService {
     ttlSeconds: number,
     loader: () => Promise<T>,
   ) {
-    return this.getOrSet<T>(this.makeScopedKey(scope, key), ttlSeconds, loader);
+    return this.getOrSet<T>(this.maINRcopedKey(scope, key), ttlSeconds, loader);
   }
 
   async invalidatePattern(pattern: string) {

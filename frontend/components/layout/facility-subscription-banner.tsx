@@ -9,7 +9,7 @@ import { useMyFacilitySubscriptionStatus } from "@/hooks/use-facility-subscripti
 function formatMoney(value?: number | null) {
   return new Intl.NumberFormat("en-KE", {
     style: "currency",
-    currency: "KES",
+    currency: "INR",
     maximumFractionDigits: 0,
   }).format(Number(value || 0));
 }

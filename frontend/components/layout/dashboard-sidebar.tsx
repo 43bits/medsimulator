@@ -62,7 +62,7 @@ export function DashboardSidebar({ mobile = false }: { mobile?: boolean }) {
           {!compact ? (
             <span className="min-w-0">
               <span className="block truncate text-[0.95rem] leading-tight font-bold tracking-tight text-foreground">
-                Invinceible <span className="text-gradient-brand">Core</span>
+                MedSimulator <span className="text-gradient-brand">Core</span>
               </span>
               <span className="block text-[0.65rem] font-medium tracking-widest text-muted-foreground uppercase">
                 Hospital OS

@@ -345,7 +345,7 @@ export function CreateBranchForm() {
                 <FormItem>
                   <FormLabel>Currency</FormLabel>
                   <FormControl>
-                    <Input className="h-11 rounded-xl" placeholder="KES" {...field} />
+                    <Input className="h-11 rounded-xl" placeholder="INR" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>

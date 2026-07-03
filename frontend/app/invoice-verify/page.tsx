@@ -13,7 +13,7 @@ import { Button } from "@/components/ui/button";
 function formatMoney(value?: number | null) {
   return new Intl.NumberFormat("en-KE", {
     style: "currency",
-    currency: "KES",
+    currency: "INR",
     maximumFractionDigits: 2,
   }).format(Number(value || 0));
 }

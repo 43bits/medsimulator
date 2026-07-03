@@ -262,7 +262,7 @@ export class InMemoryPrisma {
         totalTaxableAmount: 0,
         totalTaxAmount: 0,
         totalAmount: 0,
-        currency: 'KES',
+        currency: 'INR',
       },
     );
     this.integrationOutboundRequest = new InMemoryModel(

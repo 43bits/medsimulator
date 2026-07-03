@@ -65,10 +65,10 @@ const SETTING_SECTIONS: SettingSection[] = [
         key: "SYSTEM_CURRENCY",
         label: "System Currency",
         description: "Default currency used in billing and reports.",
-        defaultValue: "KES",
+        defaultValue: "INR",
         type: "select",
         options: [
-          { label: "KES", value: "KES" },
+          { label: "INR", value: "INR" },
           { label: "USD", value: "USD" },
           { label: "EUR", value: "EUR" },
         ],

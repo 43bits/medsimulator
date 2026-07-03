@@ -129,7 +129,7 @@ export default function LoginPageClient() {
             </span>
             <div>
               <p className="text-lg leading-tight font-bold tracking-tight">
-                Invinceible Core
+                MedSimulator
               </p>
               <p className="text-xs font-medium tracking-[0.22em] uppercase opacity-80">
                 Hospital OS
@@ -174,7 +174,7 @@ export default function LoginPageClient() {
               </span>
               <div>
                 <p className="leading-tight font-bold tracking-tight">
-                  Invinceible <span className="text-gradient-brand">Core</span>
+                  MedSimulator <span className="text-gradient-brand">Core</span>
                 </p>
                 <p className="text-[0.65rem] font-medium tracking-widest text-muted-foreground uppercase">
                   Hospital OS
@@ -310,38 +310,7 @@ export default function LoginPageClient() {
             </Form>
           </div>
 
-          <details className="group mt-5 rounded-xl border border-border bg-card px-4 py-3">
-            <summary className="cursor-pointer list-none text-xs font-semibold tracking-wider text-muted-foreground uppercase select-none">
-              Need assistance?
-            </summary>
-            <div className="mt-3 grid gap-2">
-              {supportContacts.map((creator) => (
-                <a
-                  key={creator.name}
-                  href={getWhatsappLink(
-                    creator.whatsappNumber,
-                    creator.message,
-                  )}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex items-center justify-between gap-3 rounded-lg border border-border bg-surface-2/60 px-3 py-2 text-sm transition-colors hover:border-module/40 hover:bg-module-soft"
-                >
-                  <span className="min-w-0">
-                    <span className="block truncate font-medium">
-                      {creator.name}
-                    </span>
-                    <span className="text-xs text-muted-foreground">
-                      {creator.phone}
-                    </span>
-                  </span>
-                  <MessageCircle
-                    className="size-4 shrink-0 text-module"
-                    aria-hidden
-                  />
-                </a>
-              ))}
-            </div>
-          </details>
+          
         </div>
       </section>
     </main>

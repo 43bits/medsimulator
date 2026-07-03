@@ -11,17 +11,17 @@ import { Button } from "@/components/ui/button";
 
 const imagePanels = [
   {
-    label: "Hospital discipline",
+    label: "Advanced Medical Training",
     image:
       "https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&w=1000&q=88",
   },
   {
-    label: "Patient service",
+    label: "Patient Care Excellence",
     image:
       "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1000&q=88",
   },
   {
-    label: "Clinical teamwork",
+    label: "Clinical Teamwork",
     image:
       "https://images.unsplash.com/photo-1551601651-2a8555f1a136?auto=format&fit=crop&w=1000&q=88",
   },
@@ -37,27 +37,31 @@ export default function InspirationPage() {
           <div className="space-y-6">
             <div className="inline-flex items-center gap-2 border border-border bg-surface-2 px-3 py-2 text-sm font-semibold text-module">
               <HeartHandshake className="h-4 w-4" />
-              Inspiration behind Invinceible Core HMS
+              Inspiration Behind MedSimulator
             </div>
 
             <div>
               <h1 className="max-w-3xl text-5xl font-bold leading-tight tracking-tight text-foreground md:text-7xl">
-                Rev. Dr Nelson Mandela
+                Dr. A. P. J. Abdul Kalam
               </h1>
               <p className="mt-5 max-w-2xl text-xl leading-9 text-muted-foreground">
-                Director of St Francis Hillside Medicare KSM, sponsor of the
-                system, and the person whose vision pushed this work from an
-                idea into a serious hospital operating platform.
+                Inspired by the vision of Dr. A. P. J. Abdul Kalam, MedSimulator
+                represents innovation, technology, and excellence in medical
+                education and hospital management for the next generation of
+                healthcare professionals.
               </p>
             </div>
 
             <div className="grid gap-3 sm:grid-cols-3">
               {[
-                ["Director", "St Francis Hillside Medicare KSM"],
-                ["Sponsor", "System build and hospital vision"],
-                ["Inspiration", "Service, order, and accountability"],
+                ["Vision", "Technology-driven Healthcare"],
+                ["Mission", "Medical Learning & Simulation"],
+                ["Values", "Innovation, Service & Excellence"],
               ].map(([title, detail]) => (
-                <div key={title} className="border border-border bg-[#f7fcff] p-4">
+                <div
+                  key={title}
+                  className="border border-border bg-[#f7fcff] p-4"
+                >
                   <p className="text-sm font-semibold uppercase text-module">
                     {title}
                   </p>
@@ -69,18 +73,14 @@ export default function InspirationPage() {
             </div>
 
             <div className="flex flex-col gap-3 sm:flex-row">
-              <Button asChild className="rounded-md bg-primary text-white hover:bg-brand-strong">
-                <Link href="/login">
-                  Enter system
-                  <ArrowRight className="h-4 w-4" />
-                </Link>
-              </Button>
               <Button
                 asChild
-                variant="outline"
-                className="rounded-md border-border-strong text-module hover:bg-surface-2"
+                className="rounded-md bg-primary text-white hover:bg-brand-strong"
               >
-                <Link href="/reviews">View user reviews</Link>
+                <Link href="/login">
+                  Launch MedSimulator
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
               </Button>
             </div>
           </div>
@@ -90,12 +90,16 @@ export default function InspirationPage() {
               className="min-h-[720px] border border-border bg-cover bg-center shadow-2xl"
               style={{
                 backgroundImage:
-                  "url('/inspiration/rev-dr-nelson-mandela.png')",
+                  "url('/inspiration/dr-apj-abdul-kalam.png')",
               }}
             />
+
             <div className="grid gap-4">
               {imagePanels.map((panel) => (
-                <div key={panel.label} className="border border-border bg-card p-3 shadow-lg">
+                <div
+                  key={panel.label}
+                  className="border border-border bg-card p-3 shadow-lg"
+                >
                   <div
                     className="h-48 bg-cover bg-center"
                     style={{ backgroundImage: `url('${panel.image}')` }}
@@ -114,31 +118,37 @@ export default function InspirationPage() {
         <div className="mx-auto grid max-w-[1500px] gap-6 px-5 py-14 md:px-8 lg:grid-cols-3">
           <article className="border border-border bg-card p-7 shadow-sm">
             <Building2 className="mb-5 h-8 w-8 text-module" />
-            <h2 className="text-2xl font-bold">A hospital-first vision</h2>
+            <h2 className="text-2xl font-bold">
+              Smart Hospital Simulation
+            </h2>
             <p className="mt-4 text-base leading-8 text-muted-foreground">
-              The system follows the pressure of real hospital work: reception,
-              clinician review, laboratory, pharmacy, inpatient care, billing,
-              reports, and administration.
+              MedSimulator recreates complete hospital workflows including
+              registration, consultation, laboratory, pharmacy, billing,
+              inpatient management, and administration for realistic training.
             </p>
           </article>
 
           <article className="border border-border bg-card p-7 shadow-sm">
             <Stethoscope className="mb-5 h-8 w-8 text-module" />
-            <h2 className="text-2xl font-bold">Built around patient service</h2>
+            <h2 className="text-2xl font-bold">
+              Designed for Medical Education
+            </h2>
             <p className="mt-4 text-base leading-8 text-muted-foreground">
-              Rev. Dr Nelson Mandela inspired a platform where hospital teams
-              can work with order, speed, and clarity while keeping the patient
-              journey connected.
+              MedSimulator enables students, doctors, nurses, and healthcare
+              professionals to practice clinical workflows in a modern,
+              technology-enabled environment.
             </p>
           </article>
 
           <article className="border border-border bg-card p-7 shadow-sm">
             <ShieldCheck className="mb-5 h-8 w-8 text-module" />
-            <h2 className="text-2xl font-bold">Sponsored for long-term use</h2>
+            <h2 className="text-2xl font-bold">
+              Secure, Scalable & Future Ready
+            </h2>
             <p className="mt-4 text-base leading-8 text-muted-foreground">
-              His sponsorship gave the work a strong foundation: practical
-              modules, controlled access, clean records, audit visibility, and
-              room for a growing hospital network.
+              Built with secure access control, digital records, audit tracking,
+              and modular architecture, MedSimulator is ready for institutions,
+              hospitals, and medical colleges across India.
             </p>
           </article>
         </div>

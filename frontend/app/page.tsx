@@ -2,10 +2,8 @@ import Link from "next/link";
 import {
   ArrowRight,
   BedDouble,
-  ClipboardCheck,
   FlaskConical,
   HeartHandshake,
-  MessageSquareText,
   Pill,
   ReceiptText,
   ShieldCheck,
@@ -14,7 +12,6 @@ import {
 } from "lucide-react";
 import { AppLogo } from "@/components/shared/app-logo";
 import { Button } from "@/components/ui/button";
-import { getWhatsappLink, supportContacts } from "@/lib/creator-contacts";
 
 const heroPhotos = [
   {
@@ -45,7 +42,7 @@ const flow = [
 
 const controlLines = [
   ["Facilities", "Branches, users, roles, locations."],
-  ["Billing", "Invoices, SHA, M-PESA, receipts."],
+  ["Billing", "Invoices, Ayushman Bharat, UPI, receipts."],
   ["Evidence", "Audit logs, location, reports."],
   ["AI", "Clinical notes and user assistance."],
 ];
@@ -75,12 +72,6 @@ export default function HomePage() {
               <Link href="/inspiration" className="hover:text-muted-foreground">
                 Inspiration
               </Link>
-              <Link href="/reviews" className="hover:text-muted-foreground">
-                Reviews
-              </Link>
-              <Link href="/creators" className="hover:text-muted-foreground">
-                Creators
-              </Link>
             </nav>
             <Button asChild className="rounded-md bg-sky-400 text-[#06233e] hover:bg-sky-300">
               <Link href="/login">
@@ -99,10 +90,10 @@ export default function HomePage() {
 
               <div>
                 <h1 className="max-w-4xl text-5xl font-bold leading-[1.03] tracking-tight text-white md:text-7xl">
-                  Invinceible Core HMS
+                  MedSimulator
                 </h1>
                 <p className="mt-5 max-w-2xl text-lg leading-8 text-sky-50/86">
-                  Patient visits, clinical work, pharmacy, billing, SHA, reports,
+                  Patient visits, clinical work, pharmacy, billing, Ayushman Bharat integration, reports,
                   and administration in one controlled workspace.
                 </p>
               </div>
@@ -197,15 +188,15 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-[#e7f6ff]">
-        <div className="mx-auto grid max-w-[1540px] gap-6 px-5 py-12 md:px-8 xl:grid-cols-[1.05fr_0.95fr]">
+      <section className="bg-[#e7f6ff] pb-12">
+        <div className="mx-auto max-w-[1540px] px-5 py-12 md:px-8">
           <Link
             href="/inspiration"
             className="group grid overflow-hidden border border-border bg-card shadow-xl md:grid-cols-[340px_1fr]"
           >
             <div
               className="min-h-[460px] bg-cover bg-center"
-              style={{ backgroundImage: "url('/inspiration/rev-dr-nelson-mandela.png')" }}
+              style={{ backgroundImage: "url('/inspiration/dr-arvind-sharma.png')" }}
             />
             <div className="flex flex-col justify-center p-7">
               <HeartHandshake className="mb-5 h-9 w-9 text-module" />
@@ -213,10 +204,10 @@ export default function HomePage() {
                 Inspired by
               </p>
               <h2 className="mt-2 text-4xl font-bold leading-tight text-foreground">
-                Rev. Dr Nelson Mandela
+                Dr. Arvind Sharma
               </h2>
               <p className="mt-4 max-w-xl text-base leading-8 text-muted-foreground">
-                Director of St Francis Hillside Medicare KSM and sponsor of the
+                Director of City Lifeline Medicare Corporation and key visionary supporting the 
                 system build.
               </p>
               <span className="mt-7 inline-flex items-center gap-2 font-semibold text-module group-hover:text-foreground">
@@ -225,57 +216,6 @@ export default function HomePage() {
               </span>
             </div>
           </Link>
-
-          <div className="grid gap-6">
-            <Link
-              href="/reviews"
-              className="group border border-border bg-card p-6 shadow-xl"
-            >
-              <MessageSquareText className="mb-4 h-8 w-8 text-module" />
-              <h2 className="text-3xl font-bold text-foreground">
-                Staff reviews
-              </h2>
-              <p className="mt-3 text-sm leading-7 text-muted-foreground">
-                Ratings and comments from system users after real logins.
-              </p>
-              <span className="mt-6 inline-flex items-center gap-2 font-semibold text-module group-hover:text-foreground">
-                Open reviews
-                <ArrowRight className="h-4 w-4" />
-              </span>
-            </Link>
-
-            <Link
-              href="/creators"
-              className="grid overflow-hidden border border-border bg-card shadow-xl md:grid-cols-[240px_1fr]"
-            >
-              <div
-                className="min-h-[280px] bg-cover bg-center"
-                style={{ backgroundImage: "url('/creators/eng-otieno.png')" }}
-              />
-              <div className="p-6">
-                <p className="text-sm font-semibold uppercase text-module">
-                  Creators
-                </p>
-                <h2 className="mt-2 text-3xl font-bold text-foreground">
-                  Built by Eng. Otieno Owino and Eng. Moikoyo Paul
-                </h2>
-                <div className="mt-5 grid gap-3">
-                  {supportContacts.map((creator) => (
-                    <a
-                      key={creator.name}
-                      href={getWhatsappLink(creator.whatsappNumber, creator.message)}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="flex items-center justify-between border border-border bg-[#f7fcff] px-4 py-3 text-sm font-semibold text-foreground"
-                    >
-                      <span>{creator.name}</span>
-                      <span className="text-module">{creator.phone}</span>
-                    </a>
-                  ))}
-                </div>
-              </div>
-            </Link>
-          </div>
         </div>
       </section>
     </main>

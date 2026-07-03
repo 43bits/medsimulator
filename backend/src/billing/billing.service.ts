@@ -3150,7 +3150,7 @@ export class BillingService {
 
   private mpesaTimestamp() {
     const parts = new Intl.DateTimeFormat('en-GB', {
-      timeZone: 'Africa/Nairobi',
+      timeZone: 'india',
       year: 'numeric',
       month: '2-digit',
       day: '2-digit',

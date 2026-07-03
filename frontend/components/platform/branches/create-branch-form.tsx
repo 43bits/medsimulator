@@ -331,7 +331,7 @@ export function CreateBranchForm() {
                 <FormItem>
                   <FormLabel>Timezone</FormLabel>
                   <FormControl>
-                    <Input className="h-11 rounded-xl" placeholder="Africa/Nairobi" {...field} />
+                    <Input className="h-11 rounded-xl" placeholder="india" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>

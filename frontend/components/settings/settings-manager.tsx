@@ -54,10 +54,10 @@ const SETTING_SECTIONS: SettingSection[] = [
         key: "SYSTEM_TIMEZONE",
         label: "System Timezone",
         description: "Default timezone for operational dates and audit trails.",
-        defaultValue: "Africa/Nairobi",
+        defaultValue: "india",
         type: "select",
         options: [
-          { label: "Africa/Nairobi", value: "Africa/Nairobi" },
+          { label: "india", value: "india" },
           { label: "UTC", value: "UTC" },
         ],
       },

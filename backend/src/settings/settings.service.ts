@@ -153,7 +153,7 @@ export class SettingsService {
       },
       {
         settingKey: 'SYSTEM_TIMEZONE',
-        settingValue: 'Africa/Nairobi',
+        settingValue: 'india',
         valueType: 'string',
         category: 'GENERAL',
         description: 'Default system timezone',

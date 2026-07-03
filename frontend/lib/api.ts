@@ -1,5 +1,10 @@
 const API_BASE_URL =
   process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:3000" || "https://medsimu-production.up.railway.app";
+  console.log(
+  "NEXT_PUBLIC_API_BASE_URL =",
+  process.env.NEXT_PUBLIC_API_BASE_URL,
+);
+console.log("API_BASE_URL =", API_BASE_URL);
 
 export class ApiError extends Error {
   status: number;

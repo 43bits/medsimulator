@@ -207,7 +207,7 @@ export default function LoginPageClient() {
                   name="username"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Username or email</FormLabel>
+                      <FormLabel>type admin</FormLabel>
                       <FormControl>
                         <div className="relative">
                           <User2
@@ -217,7 +217,7 @@ export default function LoginPageClient() {
                           <Input
                             autoComplete="username"
                             className="h-11 pl-9"
-                            placeholder="e.g. jane.wanjiku"
+                            placeholder="admin"
                             {...field}
                           />
                         </div>
@@ -232,7 +232,7 @@ export default function LoginPageClient() {
                   name="password"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Password</FormLabel>
+                      <FormLabel>password123</FormLabel>
                       <FormControl>
                         <div className="relative">
                           <LockKeyhole
@@ -243,7 +243,7 @@ export default function LoginPageClient() {
                             type={showPassword ? "text" : "password"}
                             autoComplete="current-password"
                             className="h-11 pr-11 pl-9"
-                            placeholder="Enter password"
+                            placeholder="Enter password123"
                             {...field}
                           />
                           <button

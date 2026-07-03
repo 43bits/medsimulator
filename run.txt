@@ -1,0 +1,15 @@
+npm ci                        # installs deps + runs `prisma generate` automatically
+npm run prisma:migrate:deploy # applies the 21 existing migrations to your DB
+npm run db:seed:safe          # seeds roles + baseline reference data (needed to log in)
+npm run start:dev             # API now on http://localhost:3000
+cd frontend
+
+npm ci
+npm run dev                   # app now on http://localhost:3001
+
+
+netstat -ano | findstr :3000
+
+
+taskkill /IM node.exe /F
+npm run start:dev
